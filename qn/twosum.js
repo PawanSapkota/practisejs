@@ -33,15 +33,13 @@ console.log("two sum");
 // Output: [0,1]
 
 var twoSum = function(nums, target) {
-    console.log(nums,target)
-    let count = 0
+    console.log("nums")
+    let map = new Map();
+    console.log("map",map)
+   
 
-    nums.forEach(num =>{
-        
-        console.log(num)
        
-        
-    })
+
     
 };
 
