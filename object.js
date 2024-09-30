@@ -142,4 +142,33 @@ console.log("myFather nationality:", myFather.nationality);  // Accesses prototy
 console.log("myMother nationality:", myMother.nationality);  // Accesses prototype property
 
 
+// this is who we can change  the value of object by object referencing
+const changeAge = {
+    name:"Ram",
+    age:35
+}
+const age = Object.create(changeAge);
+const assign = Object.assign(age,changeAge)
+age.age = 30;
+console.log("change Age",age)
 
+
+const employee={
+    name:"Shyam Bhandari",
+    designation:"Accountant",
+    age:25
+}
+const result = Object.create(employee);
+console.log(result.name)
+
+
+function Employee(name,age){
+    this.name = name,
+    this.age = age
+
+}
+const x = new Employee("Ram",35)
+
+Employee.prototype.salary = 33000;
+
+console.log(x.salary)
