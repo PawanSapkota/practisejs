@@ -97,7 +97,6 @@ console.log(reverseEachElement([234343,7879]));
 
 
 // const reverse the array of each element by modulous
-
 const reverseByModulus = (nums)=>{
     let result = [];
 
@@ -145,3 +144,36 @@ const removeDuplicate = (value)=>{
 console.log(removeDuplicate([2,1,1,3,4,3,4,5,2,5]))
 
 
+// find the second largest number from the array
+
+const findSecondLargest = (array)=>{
+    const unique = Array.from(new Set(array));
+
+    unique.sort((a,b)=>{
+        return b-a;
+    })
+    if(unique.length >= 2){
+        return unique[1]
+    }else{
+        return - 1
+    }
+}
+console.log(findSecondLargest([2,6,5,9,8,9,8]))
+console.log(findSecondLargest([5,10,10]))
+
+
+const findLargestNumber = (value)=>{
+    let number = value[0];
+    
+
+    for(let i=1;i < value.length ; i++){
+         if( value[i] > number ){
+            number = value[i]
+         }  
+
+    }
+    return number
+    
+}
+
+console.log(findLargestNumber([2,9,6,30,20]))
